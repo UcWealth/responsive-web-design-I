@@ -1,3 +1,188 @@
 /* Use your own code or past solution for Great Idea Web Page CSS here! */
 
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav,output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+    font-weight: bold;
+}
+
+html, body {
+	background:#000;
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Your code starts here! */
+.container {
+	display: flex;
+	flex-flow: row wrap;
+	padding: 2% 5% 5% 5%;
+	margin: 0 10%;
+	background: #fff;
+}
+
+header { display: flex; justify-content: space-between }
+header nav ul li{ display: inline; justify-content: space-between; }
+
+header img{ margin: 0 0 0 7.5em; }
+
+/* header nav img { vertical-align: top; } */
+
+header nav a { text-decoration:none; color:gray; padding: 0 15px;}
+
+.inline-block { display: inline-block;  }
+
+.first-section { width: 100%; justify-content: flex-end;}
+
+.first-section img { vertical-align: bottom; }
+
+.first-section h1{ font-size: 80px; }
+
+.first-div {
+	padding: 0 20px 10px 30px;
+	text-align: center;
+	margin-right:5em;
+	padding-bottom: 40px;
+	box-sizing: border-box;
+}
+.first-div button {
+	padding: 8px 35px;
+	border: 1.5px solid black;
+	background: #fff;
+}
+.second-section { width: 100%;}
+
+.second-div {  width: 48%; display: inline-block; padding-right: 4%;}
+
+.middle-img { margin: auto; width: 100%;}
+
+.third-div { width:32%; padding-right: 3%; display: inline-block;}
+
+.second-div-wrapper { width: 100%; }
+
+.address { width: 100%; }
+
+footer { width: 100%; 
+		 text-align: center; margin-top: 3em; }
+
+.service-first-section { padding-right: 0.5em; }
+.service-first-section img { width: 99%; }
+
+.service-second-section {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+
+.service-second-section div{
+	width: 46%;
+	padding: 1.5em;
+	border: 1.5px solid black;
+	background-color: #f8f8f8;
+}
+
+.service-second-section button {
+	padding: 3%; width: 40%; background:#fff;
+	border-radius:8%; margin-top: 4%;border: solid;
+}
+
+.service-third-section {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.service-third-section div {
+	width: 46%;
+	padding: 2%;
+}
+.service-third-section img {
+	width: 46%;
+}
+
+.service-third-section li {
+	list-style-type: disc;
+}
+
+.left { margin-right: 4.29em; margin-bottom: 2em;}
+.right { margin-bottom: 2em;}
+
+/* --------- MEDIA QUERIES ------ */
+
+@media(max-width: 800px) {
+	.first-section img { display: none; }
+	header { flex-direction: column; margin:auto;}
+	header img { order: 0; display: block; margin: auto;}
+	header nav { order: 1; margin-top: 28px; }
+	header nav ul li { display: inline-flex; }
+	header nav a { padding: 0 0.5em;}
+	.first-div { display: block; margin: auto; }
+
+}
+
+@media(max-width: 500px) {
+	.container { flex-direction: column; }
+	header nav{ text-align: center;}
+	header nav ul li:first-child { border-top: 1px solid gray; }
+	header nav ul li { width: 100%; display: block;
+		 border-bottom: 1px solid grey; border-width: 100%; padding: 10px 0;}
+	.second-div, .third-div { display: block; width: 100%; }
+	.third-div { margin-top: 10px; }
+	#about { margin-top: 10px; }
+	
+}
 
